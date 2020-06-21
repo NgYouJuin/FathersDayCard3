@@ -1,0 +1,156 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+#outside {
+    z-index: 1;
+    position: absolute;
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+    transform-origin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .open-card {
+    transform: rotateY(90deg);
+  }
+  
+  #outside-title {
+    color: black;
+    font-family: Courier;
+    font-size: 12pt;
+    text-align: center;
+  }
+  
+  #outside-pic {
+    width: 150px;
+    height: 150px;
+  }
+  
+  #outside-help {
+    color: black;
+    font-family: Courier;
+    font-size: 12pt;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #inside {
+    z-index: 0;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  #inside-title {
+    color: black;
+    font-family: Courier;
+    font-size: 12pt;
+    text-align: center;
+  }
+  
+  #inside-pic {
+    width: 50px;
+    height: 150px;
+  }
+  
+  #message {
+    color: black;
+    font-family: Courier;
+    font-size: 12pt;
+    text-align: center;
+  }
+  
+  button {
+    background: silver;
+  }
+  .svg-wrapper {
+    height: 60px;
+      margin: 0 auto;
+      margin-top: 40px;
+    position: relative;
+    transform: translateY(-50%);
+    width: 320px;
+  }
+  
+  .shape {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: blue;
+  }
+  
+  .text {
+    color: black;
+    font-family: 'Roboto Condensed';
+    font-size: 35px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+  }
+
+  .svg-wrapper2 {
+    height: 60px;
+      margin: 0 auto;
+      margin-top: 40px;
+    position: relative;
+    transform: translateY(-50%);
+    width: 320px;
+  }
+  
+  .shape2 {
+    fill: transparent;
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+    stroke: black;
+  }
+  
+  .text2 {
+    color: black;
+    font-family: 'Roboto Condensed';
+    font-size: 35px;
+    letter-spacing: 8px;
+    line-height: 32px;
+    position: relative;
+    top: -48px;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dasharray: 140 540;
+      stroke-dashoffset: -474;
+      stroke-width: 8px;
+    }
+    100% {
+      stroke-dasharray: 760;
+      stroke-dashoffset: 0;
+      stroke-width: 2px;
+    }
+  }
+  
+  .svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
+
+  .svg-wrapper2:hover .shape2 {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+  }
